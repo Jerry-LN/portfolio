@@ -1,2 +1,2 @@
 # portfolio
-[Portfolio](https://jerry-ln.github.io/portfolio/portfolio/home.html)
+[Portfolio](https://jerry-ln.github.io/portfolio/home.html)
