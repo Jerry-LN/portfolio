@@ -1,23 +1,37 @@
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 15;
+}
 
+/* The loading Screen code is from https://css-loaders.com/*/
 .loader {
     --d:22px;
     width: 4px;
     height: 4px;
     border-radius: 50%;
-    color: #fae8d7;
+    color: #d18034;
     box-shadow: 
-      calc(1*var(--d))      calc(0*var(--d))     0 0,
-      calc(0.707*var(--d))  calc(0.707*var(--d)) 0 1px,
-      calc(0*var(--d))      calc(1*var(--d))     0 2px,
-      calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 3px,
-      calc(-1*var(--d))     calc(0*var(--d))     0 4px,
-      calc(-0.707*var(--d)) calc(-0.707*var(--d))0 5px,
-      calc(0*var(--d))      calc(-1*var(--d))    0 6px;
+        calc(1*var(--d))      calc(0*var(--d))     0 0,
+        calc(0.707*var(--d))  calc(0.707*var(--d)) 0 1px,
+        calc(0*var(--d))      calc(1*var(--d))     0 2px,
+        calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 3px,
+        calc(-1*var(--d))     calc(0*var(--d))     0 4px,
+        calc(-0.707*var(--d)) calc(-0.707*var(--d))0 5px,
+        calc(0*var(--d))      calc(-1*var(--d))    0 6px;
     animation: l27 1s infinite steps(8);
-  }
-  @keyframes l27 {
-    100% {transform: rotate(1turn)}
-  }
+}
+
+@keyframes l27 {
+    100% { transform: rotate(1turn); }
+}
 body {
     background-color: #fae8d7 
 }
@@ -30,7 +44,7 @@ body {
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 10;
     padding: 10px 15%;
     box-sizing: border-box;
 }
@@ -69,17 +83,17 @@ a {
     border: 1px solid #ccc;
     border-radius: 2%;
     background-color: wheat;
-    z-index: 110;
+    z-index: 3;
     padding: 2px;
 }
 .header {
     width: 80%;
-    position: absolute;
-    height: 300px;
+    position: relative;
+    top: 7vh;
+    height: 250px;
     background-image: url("asset/img/DSCF0182.JPG");
     background-size: cover;
     background-position: center;
-    top: 12%;
     left: 10%
 }
 .header #intro{
@@ -94,9 +108,9 @@ a {
 }
 
 .content{
-    position: absolute;
+    position: relative;
     width: 80%;
-    top: calc(12% + 300px);
+    top: 7vh;
     margin-top: 10px;
     left: 10%;
 }

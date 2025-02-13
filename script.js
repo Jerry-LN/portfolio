@@ -1,3 +1,8 @@
+var loadingScreen = document.querySelector("#loading-screen");
+window.addEventListener('load', function() {
+    loadingScreen.style.display = 'none';
+})
+
 const contact = document.getElementById("contact");
 const popup = document.getElementById("contact_info")
 

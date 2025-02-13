@@ -3,12 +3,15 @@
 
    <head>
     <meta charset="UTF-8">
+    <!-- Loading CSS -->
     <link rel="stylesheet" href="mystyle.css">
       <title>Jiarui Lin</title>
    </head>
 	
    <body>
-      <div class = "loader"></div>
+      <div id="loading-screen">
+         <div class="loader"></div>
+     </div>
       <div class="head_slide">
          <a href="/home.html", id = "logo"> Jiarui Lin</a>
          <div id = "contact">CONTACT
@@ -26,58 +29,62 @@
          </div>
       </div>
       <div class = "content">
-         <h3>Project Name: Transit Frequency Heat Map</h3>
-         <p> Description: This heatmap visualizes the frequency of passenger activity on the public
-            transit system in Metro Vancouver area. We separated the map into different layers
-            to display the change frequency over time. </p>
-         <p>
-            Challenge: We use GTFS data from Vancouver Translink for the data analysis. 
-            This is an unfamiliar data format for us to bring data cleaning and analysis challenges.
-            What model we had at that time cannot analyze the original data. We used Python to find and clean 
-            the fault data and then complete the data analysis.
-           
-          </p>
-           
-         <p>
-            Limitation: The visualization of this map has an unsolvable problem. The heatmap successfully reflected
-            where the heat spot was in the same time interval but failed to demonstrate the frequency change over
-            different times of the day. As a result, the map makes the traffic during midnight looks similar to the day
-            A possible explanation for this issue is that the heat algorithm in Leaflet calculates each layer separately 
-            rather than combining them. A more suitable algorithm or toolset may be required to solve this problem
-         </p>
+         <div>
+            <iframe src="https://jerry-ln.github.io/heatmap_tranlink/map_visual.html" 
+            width="60%" 
+            height="400px" 
+            style="border:none;float: right; margin-left: 10px;">
+            </iframe>
+            <h3>Project Name: Transit Frequency Heat Map</h3>
+            <p> Description: This heatmap visualizes the frequency of passenger activity on the public
+               transit system in Metro Vancouver area. We separated the map into different layers
+               to display the change frequency over time. </p>
+            <p>
+               Challenge: We use GTFS data from Vancouver Translink for the data analysis. 
+               This is an unfamiliar data format for us to bring data cleaning and analysis challenges.
+               What model we had at that time cannot analyze the original data. We used Python to find and clean 
+               the fault data and then complete the data analysis.
+              
+             </p>
+              
+            <p>
+               Limitation: The visualization of this map has an unsolvable problem. The heatmap successfully reflected
+               where the heat spot was in the same time interval but failed to demonstrate the frequency change over
+               different times of the day. As a result, the map makes the traffic during midnight looks similar to the day
+               A possible explanation for this issue is that the heat algorithm in Leaflet calculates each layer separately 
+               rather than combining them. A more suitable algorithm or toolset may be required to solve this problem
+            </p>
+   
+            <p> Link: <a href="https://github.com/Jerry-LN/Van_hospital"> View Code of this map on Github</a></p>
 
-         <p> Link: <a href="https://github.com/Jerry-LN/Van_hospital"> View Code of this map on Github</a></p>
-      <iframe src="https://jerry-ln.github.io/heatmap_tranlink/map_visual.html" 
-      width="100%" 
-      height="600px" 
-      style="border:none;">
-      </iframe>
-      <h4> Hospital Service Region</h4>
-      <p>
-         Description: This map shows the location of the hospital and uses the Voronoi diagram to determine the closest hospital to each location by 
-         dividing the area into regions based on the set of points. Instead of directly labelling hospital names on the map, I added them in pupup boxes
-         to simplify the visual elements, making it easier for users to identify the nearest hospital.
+         </div>
 
-       </p>
-      <p>
-         Limitation: Voronoi Diagrams are based on Euclidean distance, which ignores 
-         terrain variations and actual traffic situations. As a result, the map may not accurately reflect practical
-         travel distances.
-         Therefore, The map is only a reference, 
-         the actual situation must be evaluated by experience of users
-      </p>
+         <div>
+            <iframe src="https://jerry-ln.github.io/Van_hospital/H_in_V.html" 
+            width="60%" 
+            height="600px" 
+            style="border:none;float: left; margin-right: 10px;">
+          </iframe>
+            <h3> Hospital Service Region</h3>
+            <p>
+               Description: This map shows the location of the hospital and uses the Voronoi diagram to determine the closest hospital to each location by 
+               dividing the area into regions based on the set of points. Instead of directly labelling hospital names on the map, I added them in pupup boxes
+               to simplify the visual elements, making it easier for users to identify the nearest hospital.
+      
+             </p>
+            <p>
+               Limitation: Voronoi Diagrams are based on Euclidean distance, which ignores 
+               terrain variations and actual traffic situations. As a result, the map may not accurately reflect practical
+               travel distances.
+               Therefore, The map is only a reference, 
+               the actual situation must be evaluated by experience of users
+            </p>
+            <p>Link: <a href="https://github.com/Jerry-LN/heatmap_tranlink"> View Code of this map on Github</a></p>
 
-      <p>Link: <a href="https://github.com/Jerry-LN/heatmap_tranlink"> View Code of this map on Github</a></p>
-      <iframe src="https://jerry-ln.github.io/Van_hospital/H_in_V.html" 
-     width="100%" 
-     height="600px" 
-     style="border:none;">
-   </iframe>
-
-   <img src="pic_trulli.jpg" alt="Italian Trulli">
-
-</iframe>
+         </div>
       </div>
+
+      <!-- Loading Javascript -->
       <script src = "script.js"></script>
    </body>
 	
